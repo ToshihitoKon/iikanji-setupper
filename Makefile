@@ -1,5 +1,5 @@
 .PHONY: install
-install: setup/mitamae alp
+install: setup/mitamae alp pt-query-digest
 	./install_bashrc.sh
 
 .PHONY: setup/mitamae
