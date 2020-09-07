@@ -23,6 +23,7 @@ alp:
 
 pt-query-digest:
 	# ubuntu20.04バイナリ
+	sudo apt update -y && sudo apt install -y libdbi-perl libdbd-mysql-perl libterm-readkey-perl libio-socket-ssl-perl
 	curl -Lo pt-query-digest.deb https://www.percona.com/downloads/percona-toolkit/3.2.1/binary/debian/focal/x86_64/percona-toolkit_3.2.1-1.focal_amd64.deb
 	sudo dpkg -i pt-query-digest.deb
 
