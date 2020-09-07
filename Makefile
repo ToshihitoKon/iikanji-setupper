@@ -20,7 +20,7 @@ alp:
 	# linux amd64バイナリ
 	curl -Lo a.zip https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 	unzip a.zip
-	sudo mv alp /usr/loca/bin/alp
+	sudo mv $(shell pwd)/alp /usr/loca/bin/alp
 
 pt-query-digest:
 	# ubuntu20.04バイナリ
