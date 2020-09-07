@@ -1,0 +1,5 @@
+package "git"
+package "tmux"
+package "vim"
+package "htop"
+pakcage "dstat"
