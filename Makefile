@@ -1,6 +1,6 @@
 .PHONY: install
 install: setup/mitamae alp
-	@echo "source ./isucon-benri.bashrc"
+	./install_bashrc.sh
 
 .PHONY: setup/mitamae
 setup/mitamae: mitamae
