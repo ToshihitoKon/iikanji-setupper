@@ -1,7 +1,7 @@
 SHELL=/bin/bash
 
 .PHONY: install
-install: setup/mitamae alp pt-query-digest
+install: setup/mitamae setup/alp pt-query-digest
 	./install_bashrc.sh
 
 .PHONY: setup/mitamae
@@ -16,11 +16,13 @@ mitamae:
 	chmod +x mitamae
 	rm -f m.tar.gz
 
+setup/alp: alp
+	sudo install alp /usr/loca/bin/alp
+
 alp:
 	# linux amd64バイナリ
 	curl -Lo a.zip https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 	unzip a.zip
-	sudo mv $(shell pwd)/alp /usr/loca/bin/alp
 
 pt-query-digest:
 	# ubuntu20.04バイナリ
