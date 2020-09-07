@@ -1,4 +1,5 @@
 package "git"
+package "unzip"
 package "tmux"
 package "vim"
 package "htop"
