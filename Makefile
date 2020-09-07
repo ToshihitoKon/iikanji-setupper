@@ -1,7 +1,8 @@
 .PHONY: install
-install: mitamae alp
+install: setup/mitamae alp
 	@echo "source ./isucon-benri.bashrc"
 
+.PHONY setup/mitamae
 setup/mitamae: mitamae
 	sudo ./mitamae local isucon-recipie.rb
 
@@ -12,7 +13,7 @@ mitamae:
 	chmod +x mitamae
 	rm -f m.tar.gz
 
-alp: mitamae
+alp:
 	curl -Lo a.zip https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 	unzip a.zip
 	sudo install alp /usr/loca/bin/alp
