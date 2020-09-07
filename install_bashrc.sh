@@ -9,4 +9,5 @@ isuconbash=`cat ~/.bashrc | grep isucon-benri`
 if [ -z "${isuconbash}" ]; then
     echo "source $(pwd)/isucon-benri.bashrc" >> ~/.bashrc
     echo install comoplete
+    echo please restart bash
 fi
