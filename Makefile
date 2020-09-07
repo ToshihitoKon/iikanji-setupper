@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 .PHONY: install
 install: setup/mitamae alp pt-query-digest
 	./install_bashrc.sh
