@@ -2,7 +2,7 @@
 install: setup/mitamae alp
 	@echo "source ./isucon-benri.bashrc"
 
-.PHONY setup/mitamae
+.PHONY: setup/mitamae
 setup/mitamae: mitamae
 	sudo ./mitamae local isucon-recipie.rb
 
