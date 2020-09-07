@@ -12,7 +12,7 @@ mitamae:
 	chmod +x mitamae
 	rm -f m.tar.gz
 
-alp:
+alp: mitamae
 	curl -Lo a.zip https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 	unzip a.zip
 	sudo install alp /usr/loca/bin/alp
