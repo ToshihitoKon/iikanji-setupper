@@ -22,7 +22,7 @@ alp:
 pt-query-digest:
 	# ubuntu20.04バイナリ
 	curl -Lo pt-query-digest.deb https://www.percona.com/downloads/percona-toolkit/3.2.1/binary/debian/focal/x86_64/percona-toolkit_3.2.1-1.focal_amd64.deb
-	sudo dpkg -i pt-query-digest.deb
+	-sudo dpkg -i pt-query-digest.deb
 	sudo apt --fix-broken install -y
 	sudo dpkg -i pt-query-digest.deb
 
