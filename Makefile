@@ -1,12 +1,8 @@
 SHELL=/bin/bash
 
 .PHONY: install
-install: setup/mitamae setup/alp pt-query-digest
+install: mitamae alp pt-query-digest
 	./install_bashrc.sh
-
-.PHONY: setup/mitamae
-setup/mitamae: mitamae
-	sudo ./mitamae local isucon-recipie.rb
 
 mitamae:
 	# linuxバイナリ
@@ -15,18 +11,19 @@ mitamae:
 	mv mitamae* mitamae
 	chmod +x mitamae
 	rm -f m.tar.gz
-
-setup/alp: alp
-	sudo install alp /usr/loca/bin/alp
+	sudo ./mitamae local isucon-recipie.rb
 
 alp:
 	# linux amd64バイナリ
 	curl -Lo a.zip https://github.com/tkuchiki/alp/releases/download/v1.0.3/alp_linux_amd64.zip
 	unzip a.zip
+	sudo install alp /usr/loca/bin/alp
 
 pt-query-digest:
 	# ubuntu20.04バイナリ
 	curl -Lo pt-query-digest.deb https://www.percona.com/downloads/percona-toolkit/3.2.1/binary/debian/focal/x86_64/percona-toolkit_3.2.1-1.focal_amd64.deb
+	sudo dpkg -i pt-query-digest.deb
+	sudo apt --fix-broken install -y
 	sudo dpkg -i pt-query-digest.deb
 
 .PHONY: clean
