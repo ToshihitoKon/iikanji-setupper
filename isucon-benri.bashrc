@@ -25,11 +25,11 @@ fi
 
 cmd=dstat
 if [ "`command -v $cmd`" ]; then
-    alias dstat-full='dstat -tclmdrn'
-    alias dstat-mem='dstat -tclm'
-    alias dstat-cpu='dstat -tclr'
-    alias dstat-net='dstat -tclnd'
-    alias dstat-disk='dstat -tcldr'
+    alias dstat-full='dstat -tclmdrn --nocolor'
+    alias dstat-mem='dstat -tclm --nocolor'
+    alias dstat-cpu='dstat -tclr --nocolor'
+    alias dstat-net='dstat -tclnd --nocolor'
+    alias dstat-disk='dstat -tcldr --nocolor'
 else
     echo "warn: command not found: $cmd"
 fi
