@@ -31,6 +31,10 @@ clean:
 	rm -f mitamae*
 	rm -f m.tar.gz
 
+.PHONY: vimrc
+vimrc:
+	cp .vimrc ~/
+
 .PHONY: check
 check:
 ifneq ($(shell id -u), 0)
@@ -38,3 +42,6 @@ ifneq ($(shell id -u), 0)
 	@exit 1
 endif
 
+# 最後に設定ファイルに好ましくない記述がないか確認ワンショット
+lastcheck:
+	find /etc/nginx -name '.conf' | cat | grep log
